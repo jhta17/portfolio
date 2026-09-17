@@ -1,7 +1,7 @@
 @import url("https://use.typekit.net/zyx1btf.css");
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Times New Roman', serif;
     overflow:hidden;
 }
 
@@ -23,7 +23,6 @@ body {
 
 .la-title {
     transition: 0.3s all ease-out;
-    font-family: 'Droid Serif', serif;
     font-weight:300;
     padding-left:5vh;
     font-size:6rem;
@@ -40,9 +39,9 @@ body {
 
 .la-background{
     transition:0.3s all ease-in;
-    background-color: #f28fde;
+    background-color: #eee;
     opacity: 1;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #f28fde 10px ), repeating-linear-gradient( #4affff55, #4affff );
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #010C13 10px ), repeating-linear-gradient( #4affff55, #4affff );
     height: 100vh;
     width:100vw;
     position:fixed;
@@ -63,14 +62,13 @@ body {
 }
 
 .la-enter-button {
-    font-family: lato, sans-serif;
     font-weight: 300;
     padding:1vh;
     width:auto;
     background-color:#02111B;
     color:#fff;
     border:none;
-    border-bottom:3px solid #F28FDE;
+    border-bottom:3px solid #010C13;
     transition:0.3s all ease-in;
 }
 
@@ -127,15 +125,17 @@ body {
 .ho-container {
     transition:0.3s all ease-in;
     padding:5ex;
-    padding: 5ex 10ex 10ex 10ex;
+    padding: 5ex 20% 10ex 20%;
     left:0;
     position:relative;
-    background-color: #0e131a;
+    text-align: justify;
+}
+.project-description{
+    font-family:'Georgia', serif;
 }
 
 
 .ho-title {
-    font-family: 'Droid Serif', serif;
     font-weight:300;
     padding-left:5vh;
     padding-top:0;
@@ -147,7 +147,17 @@ body {
    
 }
 
-
+#description{
+    padding-bottom:0.3em;
+    border-bottom: 1px dotted #000;
+}
+.ho-subheading{
+    padding-bottom:0.5em;
+    width:100%;
+    border-bottom:3px solid #000;
+    font-size:2rem; 
+    margin:0
+}
 
 .headbar-icon {
     z-index:99999;
@@ -162,24 +172,26 @@ body {
 .heading {
     margin-top: 1em;
     padding-top:1.5em;
-    padding-left:1.5em;
-    font-family:'Droid-serif', serif;
+    padding-bottom:0.5em;
+    width:100%;
+    font-family:'Georgia', serif;
+    text-transform: uppercase;
     line-height:1em;
-    font-size:1.5rem;
+    font-size:4rem;
     font-weight:600;
-    color:#FFE0F9;;
+    color:#010C13;
+    border-bottom: 2px dotted #000;
 }
 
 .title {
     border-bottom:1px solid linear-gradient(90deg,#f8effb 0%, #403875 40%, #f8effb 80%);
     width:fit-content;
-    font-family: droid-serif,serif;
     font-weight: 700;
     font-style: normal;
     font-size: 3em; 
     margin-top: 0.5em;
     padding:1rem;
-    color: #FFE0F9;
+    color: #010C13;
     border-radius:.3rem;
 }
 
@@ -190,16 +202,11 @@ body {
 
 .project-card{
     padding:0em;
-    background-color: #010C13;
-    color:#fff;
-    margin:0.75em;
-    font-family: 'Lato', sans-serif;
-    filter: drop-shadow(-1px 0px 3px rgb(0, 0, 0));
+    color:#010C13;
+    font-size:medium;
+    font-family:'Georgia', serif;
     transition: 0.4s all linear;
 }
-.project-card:hover {
-    background-color: #01080c;
-    }
 .project-img{
     display: 'flex';
     align-items: 'center';
@@ -221,7 +228,7 @@ body {
 
 .project-title::after {
     background: #a741b3;
-background: linear-gradient(90deg,#a741b3 0%, #ffe0f9 40%, #a741b3 80%);
+background: linear-gradient(90deg,#a741b3 0%, #010C13 40%, #a741b3 80%);
     content: " ";
     display:block; /* So we can set a width */
     width: 1.5em;
@@ -231,7 +238,6 @@ background: linear-gradient(90deg,#a741b3 0%, #ffe0f9 40%, #a741b3 80%);
 }
 
 .project-skills {
-    font-family: 'Droid-serif', serif;
     font-style: italic;
     padding-bottom:1em;
     padding-top:1em;
@@ -246,16 +252,15 @@ background: linear-gradient(90deg,#a741b3 0%, #ffe0f9 40%, #a741b3 80%);
 }
 
 .info-title {
-    font-family:'Droid-serif', serif;
     line-height:1em;
     font-weight:600;
     width:100%;
-    color:#FFE0F9;;
+    color:#010C13;;
 }
 
 .info-title::after {
-    background: #ffe0f9;
-background: linear-gradient(90deg,#ffe0f9 0%, #562a95 40%, #02111b 80%);
+    background: #010C13;
+background: linear-gradient(90deg,#010C13 0%, #562a95 40%, #02111b 80%);
     content: " ";
     display:block; /* So we can set a width */
     width: 100%;
@@ -272,10 +277,8 @@ background: linear-gradient(90deg,#ffe0f9 0%, #562a95 40%, #02111b 80%);
 }
 
 .info-box {
-    color:#fff;
     background-color: #010C13;
     padding:1.5em;
-    border-radius:.3rem;
     filter: drop-shadow(-1px 0px 3px rgb(0, 0, 0));
     transition:0.4s linear all;
 }

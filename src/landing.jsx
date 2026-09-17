@@ -36,17 +36,10 @@ export default function App() {
               <Stack
                 justify="center"
                 align="center"
-                gutterXs="lg"
                 className="la-grid"
                 col={2}
               >
-                <div className="la-image-holder">
-                  <img
-                    className="la-image"
-                    src="./skeleton-removebg-preview.png"
-                  />
-                </div>
-                <Grid className="la-title-holder" gutterXs="xs" grow>
+                <Grid className="la-title-holder" grow>
                   <div className="la-title">t</div>
                   <div className="la-title">a</div>
                   <div className="la-title">n</div>
@@ -60,7 +53,7 @@ export default function App() {
                   fullWidth
                   variant="outline"
                 >
-                  View Portfolio
+                  View Paper
                 </Button>
               </Stack>
             </Container>
@@ -80,7 +73,6 @@ export default function App() {
               <Stack
                 justify="center"
                 align="center"
-                gutterXs="lg"
                 className="la-grid"
                 col={2}
               >
@@ -100,7 +92,6 @@ export default function App() {
                     transform: "scale(0.6)",
                   }}
                   className="la-title-holder"
-                  gutterXs="xs"
                   grow
                 >
                   <div className="la-title">t</div>

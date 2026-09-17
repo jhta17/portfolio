@@ -56,7 +56,7 @@ const projectData = [
     image: project1,
   },
   {
-    title: "Centroid Redesign",
+    title: "Envisioning a new software for instructors",
     description:
       "A company I tutored for used a system to track each student and their tutoring sessions. This system was a form on a website that needed to be filled out for every student and asked for many outdated pieces of information that took up time and slowed efficiency, especially because each tutor taught four students at the same time. Additionally, a separate tab was needed for each student since it was not possible to do multiple students with one form. Since I recently learned Adobe XD, I decided to get more practice with it by reimagining a more efficient version of Centroid where multiple students can be tracked in a more efficient way. Above is the resulting application that lets you search for and add new student tracking cards as they come, and fill out the necessary information in a quick manner. I showed my redesign to my manager who was inspired to rehaul some of his systems for his company.",
     year: "2021",
@@ -72,7 +72,7 @@ const projectData = [
     image: project2,
   },
   {
-    title: "Testudo Redesign",
+    title: "Redesigning the world's oldest online course catalog ",
     description:
       "In my Introduction to Design Cultures and Creativity class, I was introduced to a program called Adobe XD. I really loved how intuitive it was to create any interface design of my dreams. One of the major projects involved redesigning a system that is currently hard and frustrating to use. I chose our school's course registration system. Currently, the design is outdated and made in the early 2000's, with one site to register on, one site to view courses available, and a third site to check your waitlist status. This did not make much sense to me, so in my redesign, I focused on combining all of the relevant tasks for course registration into one web application. In this reimagination, students can browse courses, select interesting ones to view on their schedule, and directly register from the same application. Since many students prefer to build their schedule to their liking before finalizing their decisions, the ability to add to the schedule allows an easy way to visualize their courses before finalizing their choice by clicking 'Register'. ",
     year: "2020",
@@ -98,7 +98,7 @@ const projectData = [
     image: project6,
   },
   {
-    title: "Tumblr Themes",
+    title: "Tumblr Themes: How it all started",
     description:
       "My very first experience in web design started when I was editing my own blog in Tumblr. I enjoyed this creative outlet and quickly realized the flexibility of the design that was possible by editing the raw HTML and CSS. From there, I practiced a ton of HTML and CSS with my own blog, and soon began to develop themes. I developed about twenty themes, and ended up getting three of them published to Tumblr's official themes site which are still available today. An example is shown in the picture and can be seen at https://www.tumblr.com/theme/40258. ",
     year: "2015",
@@ -116,6 +116,7 @@ export function Subgrid() {
       skills={item.skills}
       image={item.image}
       year={item.year}
+      key={item.title}
     />
   ));
   const half = Math.ceil(items.length / 2);
@@ -123,13 +124,8 @@ export function Subgrid() {
   const firstHalf = items.slice(0, half);
   const secondHalf = items.slice(half);
   return (
-    <Container size="xl" my="md" style={{ width: "100%" }}>
-      <Grid
-        gutter="xl"
-        gutterXs="md"
-        cols={2}
-        breakpoints={[{ maxWidth: "xs", cols: 1 }]}
-      >
+    <Container className="articles" size="xl" my="md" style={{ width: "100%" }}>
+      <Grid gutter="xl" cols={2} breakpoints={[{ maxWidth: "xs", cols: 1 }]}>
         <Grid.Col md={6} lg={6}>
           <Stack>{firstHalf}</Stack>
         </Grid.Col>
@@ -144,13 +140,17 @@ export function Subgrid() {
 /* Entire home page */
 export function HomePageComponent({ style, title, description }) {
   const items = aboutData.map((item) => (
-    <InfoCard title={item.title} description={item.description} />
+    <InfoCard
+      key={item.title}
+      title={item.title}
+      description={item.description}
+    />
   ));
 
   return (
     <div className="homepage-holder" style={style}>
       <div className="ho-container">
-        <Title className="ho-title" content="Hello! I am Tanaya."></Title>
+        <Title className="ho-title" content="Project Column"></Title>
         {/* INTRODUCTION */}
         <SimpleGrid
           className="ho-introgrid"
@@ -173,15 +173,16 @@ export function HomePageComponent({ style, title, description }) {
           wrap="wrap"
         >
           {/* PROJECTS */}
-          <Heading className="ho-introtitle" content="My Projects"></Heading>
-          <Badge
-            style={{ marginTop: "10ex" }}
-            color="dark"
-            variant="filled"
-            radius="xs"
-          >
-            Project page coming soon
-          </Badge>
+          <Heading className="ho-introtitle" content="Tanaya Jha"></Heading>
+          <div id="description">
+            <span className="ho-subheading-2">Software Engineer -</span>
+            <span className="ho-subheading-2">University of Maryland -</span>
+            <span className="ho-subheading-2">
+              Interests in data-driven decisions, human psychology, and
+              programming systems
+            </span>
+          </div>
+          <h2 className="ho-subheading">Past Project Column</h2>
 
           <Space h="md" />
           <div className="ho-projects-holder">
