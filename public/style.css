@@ -1,0 +1,288 @@
+@import url("https://use.typekit.net/zyx1btf.css");
+
+body {
+    font-family: 'Lato', sans-serif;
+    overflow:hidden;
+}
+
+.app-holder{
+    width: 100%;
+}
+
+.la-title::selection {
+    background-color: #83FEF5;
+    color: #000;
+  }
+
+.la-title-holder{
+    margin-top:-5vh;
+    transition:0.3s all ease-in;
+    border-radius: 2%;
+    line-height:6rem;
+}
+
+.la-title {
+    transition: 0.3s all ease-out;
+    font-family: 'Droid Serif', serif;
+    font-weight:300;
+    padding-left:5vh;
+    font-size:6rem;
+    margin-bottom: 0.5rem;
+    z-index: 999999;
+    color:#010C13;
+    text-shadow: 0 0 1px #130411, 0 0 1px #000000;  
+}
+
+.la-title:hover{
+    color:#011638;
+    transform: scale(1.1);
+}
+
+.la-background{
+    transition:0.3s all ease-in;
+    background-color: #f28fde;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #f28fde 10px ), repeating-linear-gradient( #4affff55, #4affff );
+    height: 100vh;
+    width:100vw;
+    position:fixed;
+}
+
+
+
+.la-grid {
+        height:50vh;
+        width:90vw;
+        top:20vh;
+        position:relative;
+        margin-left:auto;
+        margin-right:auto;
+}
+.la-grid div {
+    padding:0;
+}
+
+.la-enter-button {
+    font-family: lato, sans-serif;
+    font-weight: 300;
+    padding:1vh;
+    width:auto;
+    background-color:#02111B;
+    color:#fff;
+    border:none;
+    border-bottom:3px solid #F28FDE;
+    transition:0.3s all ease-in;
+}
+
+.la-enter-button:hover{
+    border-bottom:#562a95 solid 3px;
+    background-color:#000;
+}
+
+.la-stack{
+    position:relative;
+}
+
+.la-image-holder {
+    z-index: 9;
+    height:80%; 
+    padding:0; 
+    position:relative;
+    background-repeat: no-repeat;
+    transition:0.3s all ease-in;
+}
+
+.la-image {
+    z-index: 9999;
+    height:100%;  
+    width:100%;
+    position:relative;
+    background-repeat: no-repeat;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+}
+
+.la-image-shadow {
+    z-index: 10;
+    opacity:0;
+    position:relative;
+    top: -3em;;
+    margin-left:auto;
+    margin-right:auto;
+    width:40%;
+    height:0.5em;
+    border-radius:50%;
+    background: rgb(62,24,82);
+    background: radial-gradient(circle, rgb(31, 5, 66) 20%, rgb(128, 63, 163)100%);
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.ho-container {
+    transition:0.3s all ease-in;
+    padding:5ex;
+    padding: 5ex 10ex 10ex 10ex;
+    left:0;
+    position:relative;
+    background-color: #0e131a;
+}
+
+
+.ho-title {
+    font-family: 'Droid Serif', serif;
+    font-weight:300;
+    padding-left:5vh;
+    padding-top:0;
+    font-size:6rem; 
+}
+
+.ho-projects-holder{
+    border-radius:.3rem;
+   
+}
+
+
+
+.headbar-icon {
+    z-index:99999;
+    height:40px;
+    background: transparent;
+    background-image: url('./skeleton-removebg-preview.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.heading {
+    margin-top: 1em;
+    padding-top:1.5em;
+    padding-left:1.5em;
+    font-family:'Droid-serif', serif;
+    line-height:1em;
+    font-size:1.5rem;
+    font-weight:600;
+    color:#FFE0F9;;
+}
+
+.title {
+    border-bottom:1px solid linear-gradient(90deg,#f8effb 0%, #403875 40%, #f8effb 80%);
+    width:fit-content;
+    font-family: droid-serif,serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3em; 
+    margin-top: 0.5em;
+    padding:1rem;
+    color: #FFE0F9;
+    border-radius:.3rem;
+}
+
+.homepage-holder{
+    position:absolute;
+    transition:0.3s all ease-in;
+}
+
+.project-card{
+    padding:0em;
+    background-color: #010C13;
+    color:#fff;
+    margin:0.75em;
+    font-family: 'Lato', sans-serif;
+    filter: drop-shadow(-1px 0px 3px rgb(0, 0, 0));
+    transition: 0.4s all linear;
+}
+.project-card:hover {
+    background-color: #01080c;
+    }
+.project-img{
+    display: 'flex';
+    align-items: 'center';
+    justify-content: 'center';
+}
+.project-img img {
+    border-radius: 0.3em 0.3em 0 0;
+}
+.project-section{
+    padding:1.5em;
+}
+
+.project-title {
+    font-family:'Droid-serif', serif;
+    line-height:1.5em;
+    font-weight:600;
+    width:100%;
+}
+
+.project-title::after {
+    background: #a741b3;
+background: linear-gradient(90deg,#a741b3 0%, #ffe0f9 40%, #a741b3 80%);
+    content: " ";
+    display:block; /* So we can set a width */
+    width: 1.5em;
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+    height:0.07em;
+}
+
+.project-skills {
+    font-family: 'Droid-serif', serif;
+    font-style: italic;
+    padding-bottom:1em;
+    padding-top:1em;
+    font-size:0.75em;
+    letter-spacing: 0.1em;
+}
+
+
+.project-description {
+    line-height:1.5em;
+    font-weight:300;
+}
+
+.info-title {
+    font-family:'Droid-serif', serif;
+    line-height:1em;
+    font-weight:600;
+    width:100%;
+    color:#FFE0F9;;
+}
+
+.info-title::after {
+    background: #ffe0f9;
+background: linear-gradient(90deg,#ffe0f9 0%, #562a95 40%, #02111b 80%);
+    content: " ";
+    display:block; /* So we can set a width */
+    width: 100%;
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+    height:0.07em;
+    transition: all 0.5s ease;
+    filter: hue-rotate(0deg);
+}
+
+.info-description {
+    line-height:1.5em;
+    font-weight:300;
+}
+
+.info-box {
+    color:#fff;
+    background-color: #010C13;
+    padding:1.5em;
+    border-radius:.3rem;
+    filter: drop-shadow(-1px 0px 3px rgb(0, 0, 0));
+    transition:0.4s linear all;
+}
+
+.info-box:hover .info-title::after {
+filter: hue-rotate(-90deg);
+}
+.info-box:hover {
+    background-color: #01080c;
+    }
