@@ -10,13 +10,8 @@ import {
   Grid,
 } from "@mantine/core";
 import { BiCloud, BiHeart, BiCurrentLocation } from "react-icons/bi";
-import {
-  Title,
-  InfoCard,
-  Heading,
-  Headbar,
-  ProjectCard,
-} from "./GlobalComponents";
+import { Title, InfoCard, Heading, ProjectCard } from "./GlobalComponents";
+import spotifyprojectimg from "./projectpics/spotify.PNG";
 import project1 from "./projectpics/technicafellowship.PNG";
 import project2 from "./projectpics/colorpaletteproj.PNG";
 import project3 from "./projectpics/centroidredesign.PNG";
@@ -25,48 +20,36 @@ import project5 from "./projectpics/covidratesmapproj.PNG";
 import project6 from "./projectpics/label.jpg";
 import project7 from "./projectpics/Pthemes3.PNG";
 
-const aboutData = [
-  {
-    title: "About",
-    description:
-      "Welcome to my site! I am a third year undergraduate student at the University of Maryland. I am majoring in two of my most favorite subjects: computer science and psychology. At work, I like to try and think outside of the box, whether it is to solve problems or design something brand new. In this site, you will find some basic information about me, and some projects that demonstrate my experiences in user interfaces and design to get a better idea of who I am. ",
-    icon: <BiCloud />,
-  },
-  {
-    title: "Interests",
-    description:
-      "My interests are diverse as I have a constant curiosity and hunger for learning. I enjoy learning about the basis of psychology within our brain's networks as well as how we are all impacted by psychology through advertising, business, and social strategies. These fields in psychology are heavily targetted by technology, which is another one of my main interests. I enjoy programming and learning about data science, specifically artificial intelligence and its applications for our future. ",
-    icon: <BiHeart />,
-  },
-  {
-    title: "Goals",
-    description:
-      "In my career, I hope to explore design and psychology as I navigate through various technology and product oriented fields. Most of my experience is related to programming, so I am very new to design. However, my end goal is to switch into that field at some point. Once I have enough experience with software development, I hope to transfer these skills in a creative job such as product or UI/UX design. ",
-    icon: <BiCurrentLocation />,
-  },
-];
-
 const projectData = [
   {
-    title: "Technica Fellowship Program",
+    title:
+      "Understanding the fundamentals of machine learning through Spotify's Web API",
+    description: `The Spotify Web API used to be much more fully featured, allowing access to various data points such as danceability, energy, and tempo that made for good features to use for a custom classifier. This project was a fun way learn core machine learning concepts such as feature engineering and common algorithms. In the project, I pulled this data using the api, transformed and formatted it in a way that was disgestible for various keras models to train on, and then analyzed the output of the trained machine learning models to understand how they work on the same data. A full analysis is available ${(
+      <a> here</a>
+    )}`,
+    skills: "Python, Tensorflow, Pandas, Numpy, Web API's, Visualizations",
+    image: spotifyprojectimg,
+  },
+  {
+    title: "Teaching web development",
     year: "2022",
     skills: "Teaching, HTML/CSS, Web-development",
     description:
-      "As a part of the organizing team for Technica (the world's largest nonbinary hacakthon), I co-taught a fellowship program for a cohort of 15 students from various highschools. This program was designed to teach web development to women and nonbinaries who are new to programming. Each student learned HTML, CSS, and Javascript and were able to employ their skills in their very own about me page. I created many basic skeletons (one of which is above) for them to draw inspiration from, learn from, and understand how each aspect of the HTML and CSS behind the skeleton works.",
+      "As a part of the organizing team for Technica, a large hackathon, I taught a fellowship program for a cohort of 15 students from various highschools. Each student learned HTML, CSS, and Javascript and were able to employ their skills in their very own personal portfolio website. Each student had full creative control over their website, and demo'd their final project at the end of the program. Pictured above is the example I made to guide them through this. ",
     image: project1,
   },
   {
     title: "Envisioning a new software for instructors",
     description:
-      "A company I tutored for used a system to track each student and their tutoring sessions. This system was a form on a website that needed to be filled out for every student and asked for many outdated pieces of information that took up time and slowed efficiency, especially because each tutor taught four students at the same time. Additionally, a separate tab was needed for each student since it was not possible to do multiple students with one form. Since I recently learned Adobe XD, I decided to get more practice with it by reimagining a more efficient version of Centroid where multiple students can be tracked in a more efficient way. Above is the resulting application that lets you search for and add new student tracking cards as they come, and fill out the necessary information in a quick manner. I showed my redesign to my manager who was inspired to rehaul some of his systems for his company.",
+      "A company I tutored for used a complex, outdated system to track each student and their tutoring sessions. This system was a numerous forms on multiple tabs of a website that needed to be filled out for every student, with outdated fields. Since I recently learned Adobe XD, I worked with my manager to envision a better system, and decided to prototype a more efficient version of my job's current workflow. Above is the resulting application that lets you search for and add new student tracking cards as they come, and fill out the necessary information in a quick manner.",
     year: "2021",
-    skills: "Adobe XD, User experience design",
+    skills: "Adobe XD, User experience design, Product design",
     image: project3,
   },
   {
     title: "Color Palette Grid Generator",
     description:
-      "In my free time, I like to create illustrations and color them in with a color palette of my choosing. Since I found it hard to decide which colors to priotize as the 'main' color and which ones to keep at a minimum as an 'accent'. This is a mini application that I decided to make during winter break that would organize the colors across a grid so that I may visualize them better. Since I had been wanting to learn React for a long time, this was the perfect opportunity for me to do so. After taking a short online React course, I built the user interface shown above and programmed it so it shuffled a given color palette across a grid. Since it was my first time working with Javascript instead of HTML/CSS for a website, I struggled a lot, especially with using hooks, but I was able to get a simple working product finished within a week.",
+      "I decided to make during winter break that would organize the colors across a grid so that I may visualize them better. Since I had been wanting to learn React for a long time, this was the perfect opportunity for me to do so. After taking a short online React course, I built the user interface shown above and programmed it so it shuffled a given color palette across a grid. It was my first time working with React and a fun way to pick up core concepts such as stateful components, hooks, and the render cycle.",
     year: "2020",
     skills: "React, Javascript, Figma, HTML/CSS, User interface design",
     image: project2,
@@ -74,7 +57,7 @@ const projectData = [
   {
     title: "Redesigning the world's oldest online course catalog ",
     description:
-      "In my Introduction to Design Cultures and Creativity class, I was introduced to a program called Adobe XD. I really loved how intuitive it was to create any interface design of my dreams. One of the major projects involved redesigning a system that is currently hard and frustrating to use. I chose our school's course registration system. Currently, the design is outdated and made in the early 2000's, with one site to register on, one site to view courses available, and a third site to check your waitlist status. This did not make much sense to me, so in my redesign, I focused on combining all of the relevant tasks for course registration into one web application. In this reimagination, students can browse courses, select interesting ones to view on their schedule, and directly register from the same application. Since many students prefer to build their schedule to their liking before finalizing their decisions, the ability to add to the schedule allows an easy way to visualize their courses before finalizing their choice by clicking 'Register'. ",
+      "In my Introduction to Design Cultures and Creativity class, I was introduced to a program called Adobe XD. For a project to redesign a frustrating UX, I chose our school's course registration system. Currently, the design is outdated and made in the early 2000's, with one site to register on, one site to view courses available, and a third site to check your waitlist status. This did not make much sense to me, so in my redesign, I focused on combining all of the relevant tasks for course registration into one web application. In this reimagination, students can browse courses, select relevant ones to view on their schedule, and directly register from the same application. Since many students prefer to build their schedule to their liking before finalizing their decisions, the ability to pre-visualize a schedule before registering allows a much faster way to understand what courses would fit in a schedule. ",
     year: "2020",
     skills: "Adobe XD, User interface and experience design, Product design",
     image: project4,
@@ -100,7 +83,7 @@ const projectData = [
   {
     title: "Tumblr Themes: How it all started",
     description:
-      "My very first experience in web design started when I was editing my own blog in Tumblr. I enjoyed this creative outlet and quickly realized the flexibility of the design that was possible by editing the raw HTML and CSS. From there, I practiced a ton of HTML and CSS with my own blog, and soon began to develop themes. I developed about twenty themes, and ended up getting three of them published to Tumblr's official themes site which are still available today. An example is shown in the picture and can be seen at https://www.tumblr.com/theme/40258. ",
+      "My interest in programming sparked through building themes for Tumblr users. The creative flexibility I had discovered through editing the HTML/CSS of my blog led to a love for theme-making. I developed about twenty themes, and ended up getting three of them published to Tumblr's official themes site which are still available today. An example is shown in the picture and can be seen at https://www.tumblr.com/theme/40258. ",
     year: "2015",
     skills: "HTML, CSS, Web design",
     image: project7,
@@ -139,31 +122,9 @@ export function Subgrid() {
 
 /* Entire home page */
 export function HomePageComponent({ style, title, description }) {
-  const items = aboutData.map((item) => (
-    <InfoCard
-      key={item.title}
-      title={item.title}
-      description={item.description}
-    />
-  ));
-
   return (
     <div className="homepage-holder" style={style}>
       <div className="ho-container">
-        <Title className="ho-title" content="Project Column"></Title>
-        {/* INTRODUCTION */}
-        <SimpleGrid
-          className="ho-introgrid"
-          cols={3}
-          breakpoints={[
-            { maxWidth: 980, cols: 3, spacing: "md" },
-            { maxWidth: 600, cols: 1, spacing: "sm" },
-          ]}
-          mt="md"
-        >
-          {items}
-        </SimpleGrid>
-
         <Flex
           mih={50}
           gap="md"
@@ -175,15 +136,18 @@ export function HomePageComponent({ style, title, description }) {
           {/* PROJECTS */}
           <Heading className="ho-introtitle" content="Tanaya Jha"></Heading>
           <div id="description">
-            <span className="ho-subheading-2">Software Engineer -</span>
-            <span className="ho-subheading-2">University of Maryland -</span>
+            <span className="ho-subheading-2">Software Engineer ✩</span>
+            <span className="ho-subheading-2"> University of Maryland ✩</span>
             <span className="ho-subheading-2">
-              Interests in data-driven decisions, human psychology, and
-              programming systems
+              data-driven decisions, human psychology, and programming systems
             </span>
           </div>
-          <h2 className="ho-subheading">Past Project Column</h2>
-
+          <div id="subdesc">
+            <span className="ho-subheading">Past Project Column</span>
+            <span className="ho-subheading2">
+              A hand-coded archive of personal projects I have done.
+            </span>
+          </div>
           <Space h="md" />
           <div className="ho-projects-holder">
             <Subgrid />
